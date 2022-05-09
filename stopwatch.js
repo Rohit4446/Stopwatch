@@ -2,15 +2,18 @@
 const stop = document.querySelector("#stop");
 const start = document.querySelector("#start");
 const pause = document.querySelector("#pause");
-let hours = document.getElementById('hours');
-let minutes = document.getElementById('minutes');
-let seconds = document.getElementById('seconds');
-const dot = document.querySelector("#dot");
-let timer = false
-let sec =0;
-let min =0;
-let hr = 0;
+let fullTime = document.getElementById('fullTime');
+let hours="00";
+let seconds="00";
+let minutes="00";
 
+let timer = false
+let sec ="00";
+let min ="00";
+let hr = "00";
+let time = `${hr}:${min}:${sec}`;
+fullTime.innerText = time;
+console.log(time);
 
 start.addEventListener('click' , startTheWatch);
  stop.addEventListener('click' , stopTheWatch);
@@ -32,9 +35,10 @@ function stopTheWatch (){
   pause.setAttribute("disabled" , "");
   stop.setAttribute("disabled" , "")
   pause.innerHTML = "pause";
-  hours.innerHTML = "00"
-  seconds.innerHTML = "00"
-  minutes.innerHTML = "00"
+  hours="00";
+ seconds="00";
+ minutes="00";
+  fullTime.innerText =`${hours}:${minutes}:${seconds}`;
    
 
 }
@@ -66,9 +70,9 @@ function stopWatch (){
       min = ++min
       sec =0;
       if(min < 10){
-        minutes.innerHTML = "0" +min;
+        minutes = "0" +min;
       }else{
-        minutes.innerHTML = min;
+        minutes = min;
       }
       
     }
@@ -77,24 +81,22 @@ function stopWatch (){
       hr = ++hr
       min =0;
       if(hr < 10){
-        hours.innerHTML = "0" + hr;
+        hours = "0" + hr;
       }else{
-        hours.innerHTML = hr;
+        hours = hr;
       }
       
     }
 
 
     if(sec < 10){
-      seconds.innerHTML = '0'+sec;
+      seconds = '0'+sec;
     }else{
-    seconds.innerHTML = sec;
+    seconds = sec;
 
     }
-
-
-
-
+  fullTime.innerText = `${hours}:${minutes}:${seconds}`;
+    ///time = `${hours}:${minutes}:${seconds}`;
     setTimeout("stopWatch()" , 1000);
   }
   
@@ -152,3 +154,17 @@ function stopWatch (){
 
 //         console.log(a);
 //   }
+
+
+
+// let closerFunc = function (a) {
+//     debugger
+//   return function (b) {
+//     if (b) {
+//       return closerFunc(a + b);
+//     }
+//     return a;
+//   };
+// };
+// let raw = closerFunc(5)(10)(55)(30)
+// console.log(raw());
