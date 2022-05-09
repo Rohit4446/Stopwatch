@@ -103,42 +103,6 @@ function stopWatch (){
 
 
 
-// start.addEventListener('click' , () => {
-
-//     // enable or desable
-//   	stop.removeAttribute("disabled");
-//     pause.removeAttribute("disabled");
-//     start.setAttribute("disabled" , "");	
-
-// // timer
-// let min = document.getElementById("minutes").innerHTML;
-// console.log(min);
-// min = get
-
-
-// })
-
-// function pause(){
-
-//    let cont = document.getElementById("pause").innerHTML;
-//   if(cont ==  "continue") {
-//    document.getElementById("pause").innerHTML = "pause";
-//   }
-//   else {
-//     document.getElementById("pause").innerHTML = "continue";
-
-//   }
-    
-// }
-
-
-// function stop(){
-//     document.getElementById("pause").setAttribute("disabled" , "");	
-//     document.getElementById("stop").setAttribute("disabled" , "");	
-//    document.getElementById("start").removeAttribute("disabled");
-
-// }
-
 
 // Array.prototype.comtains = function (val){
 //   return this.some(string => JSON.stringify(string) === JSON.string(val));
