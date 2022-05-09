@@ -1,0 +1,38 @@
+
+
+Stopwatch
+
+One of the very important features of javascript is Timing events. 
+There are javaScript functions which after a given time execute a callback function. 
+We will utilize them to make our own stopwatch.
+
+Acceptance Criteria
+
+This stopwatch should show passed hours, minutes and seconds. // done
+
+Format of the output Time string should be HH:MM:SS // done
+
+Render 3 buttons start, stop, pause. // done
+
+Stopwatch should start on click event of start button. // dome
+
+Initially pause and stop button should be disabled. // done
+They should be enabled after stopwatch starts. // done
+
+start button should be disabled once the stopwatch starts.       // done
+
+Initial time should be 00:00:00. //done
+
+Pause and stop button have the normal functionality to pause and stop the stopwatch.//done
+
+When timer is entering pause state, change text of pause button to continue // done
+
+If the stopwatch is continued after a pause, 
+change the text of continue button to pause(like before pause state) // done
+
+When stop button is clicked,
+ restart the stopwatch (text 00:00:00, disabled pause, stop buttons and enable start button ). //  done
+Stopwatch should not loose much time
+(if timer is paused after 0.5 sec then it should 
+not loose that time and continue counting from 0.5 sec).
+Clear the timers
